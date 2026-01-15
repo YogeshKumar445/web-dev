@@ -1,17 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Images</title>
+    <meta charset="UTF-8">
+    <title>HTML Images Practice</title>
 </head>
 <body>
 
-    <h1>Image Example</h1>
-
-    <img src="../assets/images/pexels-snapwire-292442.jpg alt="Sample Image" width="300">
+    <h1>HTML Images</h1>
 
     <p>
-        Image is loaded from assets/images folder.
+        Images in HTML are added using the
+        <code>&lt;img&gt;</code> tag.
     </p>
+
+    <h2>Basic Image</h2>
+    <img src="https://via.placeholder.com/300"
+         alt="Sample placeholder image">
+
+    <h2>Image with Width and Height</h2>
+    <img src="https://via.placeholder.com/400"
+         alt="Image with size"
+         width="300"
+         height="200">
+
+    <h2>Image as a Link</h2>
+    <a href="https://www.google.com" target="_blank">
+        <img src="https://via.placeholder.com/200"
+             alt="Clickable image">
+    </a>
+
+    <h2>Local Image</h2>
+    <p>
+        Place an image inside an <b>images</b> folder
+        and link it like below:
+    </p>
+    <img src="images/profile.jpg"
+         alt="My local image">
+
+    <h2>Broken Image Example</h2>
+    <img src="images/notfound.jpg"
+         alt="This image is not available">
+
+    <h2>Image with Title (Tooltip)</h2>
+    <img src="https://via.placeholder.com/250"
+         alt="Image with title"
+         title="This is an image tooltip">
+
+    <h2>Centered Image (Without CSS)</h2>
+    <center>
+        <img src="https://via.placeholder.com/200"
+             alt="Centered image">
+    </center>
+
+    <h2>Image with Figure and Caption</h2>
+    <figure>
+        <img src="https://via.placeholder.com/300"
+             alt="Image inside figure">
+        <figcaption>
+            This is an image caption using figcaption
+        </figcaption>
+    </figure>
 
 </body>
 </html>
