@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mathematics>
+
+    <addition>
+        <number1>10</number1>
+        <number2>5</number2>
+        <result>15</result>
+    </addition>
+
+    <subtraction>
+        <number1>20</number1>
+        <number2>8</number2>
+        <result>12</result>
+    </subtraction>
+
+    <multiplication>
+        <number1>4</number1>
+        <number2>6</number2>
+        <result>24</result>
+    </multiplication>
+
+    <division>
+        <number1>30</number1>
+        <number2>5</number2>
+        <result>6</result>
+    </division>
+
+</mathematics>
