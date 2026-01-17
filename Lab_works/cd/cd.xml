@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+
+    <cd>
+        <title>Greatest Hits</title>
+        <artist>Queen</artist>
+    </cd>
+
+    <cd>
+        <title>Thriller</title>
+        <artist>Michael Jackson</artist>
+    </cd>
+
+</catalog>
