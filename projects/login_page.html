@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Animated Login UI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: radial-gradient(circle at top, #0f172a, #020617);
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .glow {
+      box-shadow: 0 0 20px #22d3ee;
+    }
+  </style>
+</head>
+
+<body class="h-screen flex items-center justify-center text-white">
+
+  <div class="w-[380px] glass rounded-xl p-8 relative overflow-hidden">
+
+    <!-- Toggle -->
+    <div class="flex justify-between mb-6">
+      <button id="loginBtn" class="font-semibold text-cyan-400">Login</button>
+      <button id="registerBtn" class="text-gray-400">Register</button>
+    </div>
+
+    <!-- FORM -->
+    <form id="form" class="space-y-4 transition-all duration-500">
+
+      <h2 id="title" class="text-2xl font-bold text-center">Welcome Back 👋</h2>
+
+      <input type="text" placeholder="Username"
+        class="w-full p-3 rounded bg-black/40 outline-none focus:ring-2 focus:ring-cyan-400" />
+
+      <input type="email" placeholder="Email"
+        class="w-full p-3 rounded bg-black/40 outline-none focus:ring-2 focus:ring-cyan-400 hidden"
+        id="emailField" />
+
+      <input type="password" placeholder="Password"
+        class="w-full p-3 rounded bg-black/40 outline-none focus:ring-2 focus:ring-cyan-400" />
+
+      <button type="submit"
+        class="w-full py-3 rounded bg-cyan-500 hover:bg-cyan-600 transition glow">
+        Login
+      </button>
+
+      <p class="text-sm text-center text-gray-400">
+        <span id="text">Don't have an account?</span>
+        <span id="switch" class="text-cyan-400 cursor-pointer"> Register</span>
+      </p>
+    </form>
+  </div>
+
+  <script>
+    const loginBtn = document.getElementById("loginBtn");
+    const registerBtn = document.getElementById("registerBtn");
+    const emailField = document.getElementById("emailField");
+    const title = document.getElementById("title");
+    const text = document.getElementById("text");
+    const switchBtn = document.getElementById("switch");
+    const formBtn = document.querySelector("button[type='submit']");
+
+    let isLogin = true;
+
+    function toggleForm() {
+      isLogin = !isLogin;
+
+      if (!isLogin) {
+        emailField.classList.remove("hidden");
+        title.innerText = "Create Account 🚀";
+        text.innerText = "Already have an account?";
+        switchBtn.innerText = " Login";
+        formBtn.innerText = "Register";
+        registerBtn.classList.add("text-cyan-400");
+        loginBtn.classList.remove("text-cyan-400");
+      } else {
+        emailField.classList.add("hidden");
+        title.innerText = "Welcome Back 👋";
+        text.innerText = "Don't have an account?";
+        switchBtn.innerText = " Register";
+        formBtn.innerText = "Login";
+        loginBtn.classList.add("text-cyan-400");
+        registerBtn.classList.remove("text-cyan-400");
+      }
+    }
+
+    switchBtn.onclick = toggleForm;
+    loginBtn.onclick = () => isLogin || toggleForm();
+    registerBtn.onclick = () => !isLogin || toggleForm();
+  </script>
+
+</body>
+</html>
