@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Callback Function</title>
+</head>
+<body>
+    <h2>Callback Function</h2>
+    <script>
+        function display(message) {
+            document.write(message);
+        }
+        function calculate(num1, num2, callback) {
+            let sum = num1 + num2;
+            callback("Sum is: " + sum);
+        }
+        calculate(5, 10, display);
+    </script>
+</body>
+</html>
