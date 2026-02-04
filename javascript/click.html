@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Events</title>
+
+    <script>
+        function showMessage() {
+            alert("Button Clicked");
+        }
+
+        function submitForm() {
+            alert("Form Submitted Successfully");
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>JavaScript Events</h2>
+
+    <button onclick="showMessage()">Click Me</button>
+
+    <br><br>
+
+    <form onsubmit="return submitForm()">
+        Name:<br>
+        <input type="text"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
