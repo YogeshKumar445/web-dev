@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interface and Constructor</title>
+</head>
+
+<body>
+
+    <h2>TypeScript Interface and Constructor</h2>
+
+    <script>
+        // Interface (conceptual in JS)
+        class Student {
+            constructor(name, course) {
+                this.name = name;
+                this.course = course;
+            }
+
+            display() {
+                document.write("Name: " + this.name + "<br>");
+                document.write("Course: " + this.course);
+            }
+        }
+
+        let s1 = new Student("Virat Kohli", "Web Technology");
+        s1.display();
+    </script>
+
+</body>
+</html>
