@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+
+    <script>
+        function validateForm() {
+            var name = document.forms["myForm"]["username"].value;
+            var password = document.forms["myForm"]["password"].value;
+
+            if (name == "" || password == "") {
+                alert("All fields are required");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Registration Form</h2>
+
+    <form name="myForm" onsubmit="return validateForm()">
+
+        Username:<br>
+        <input type="text" name="username"><br><br>
+
+        Password:<br>
+        <input type="password" name="password"><br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+</body>
+</html>
