@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decorator and Spread Operator</title>
+</head>
+
+<body>
+
+    <h2>Decorator and Spread Operator</h2>
+
+    <script>
+        // Decorator concept (simple function wrapper)
+        function logMessage(fn) {
+            return function() {
+                document.write("Function Called<br>");
+                fn();
+            }
+        }
+
+        function show() {
+            document.write("Hello from function<br><br>");
+        }
+
+        show = logMessage(show);
+        show();
+
+        // Spread Operator
+        let arr1 = [1, 2, 3];
+        let arr2 = [...arr1, 4, 5];
+
+        document.write("Spread Array: " + arr2);
+    </script>
+
+</body>
+</html>
