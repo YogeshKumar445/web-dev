@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE student [
+    <!ELEMENT student (name, course, year)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT course (#PCDATA)>
+    <!ELEMENT year (#PCDATA)>
+]>
+
+<student>
+    <name>Yogesh Kumar</name>
+    <course>B.Tech CSE</course>
+    <year>2026</year>
+</student>
