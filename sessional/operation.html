@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Operations</title>
+    <script>
+        const numbers = [10, 20, 30, 40];
+
+        let display = "Array Elements:\n";
+        for (let i = 0; i < numbers.length; i++) {
+            display += numbers[i] + "\n";
+        }
+
+        const sumArray = (arr) => arr.reduce((total, num) => total + num, 0);
+
+        const newNumbers = [...numbers, 50, 60];
+        const sum = sumArray(newNumbers);
+
+        alert(display + "\nSum of Elements: " + sum);
+    </script>
+</head>
+<body>
+    <h2>JavaScript Array Operations</h2>
+</body>
+</html>
